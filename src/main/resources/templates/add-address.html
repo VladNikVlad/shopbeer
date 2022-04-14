@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add address</title>
+</head>
+<body>
+<div class="container mt-5 mb-5">
+    <h1>Add address</h1>
+    <form action="/address/add" method="post">
+        <input type="text" name="country" placeholder="Enter country" class="form-control"><br>
+        <input type="text" name="region" placeholder="Enter region" class="form-control"><br>
+        <input type="text" name="city" placeholder="Enter city" class="form-control"><br>
+        <input type="text" name="street" placeholder="Enter street" class="form-control"><br>
+        <input type="number" name="numberBuilding" placeholder="Enter numberBuilding" class="form-control"><br>
+        <input type="number" name="apartment" placeholder="Enter apartment" class="form-control"><br>
+
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Product categories</title>
+</head>
+<body>
+<div class="container mt-5 mb-5">
+    <div  th:each="el : ${ctegories}">
+       <H4>Категория</H4>
+        <h3  th:text="${el.title}" ></h3>
+    </div>
+    <div th:each="pr : ${products}">
+        <H4>Название</H4><h3 th:text="${pr.title}"></h3>
+        <H4>Цена</H4><h3 th:text="${pr.price}"></h3>
+        <h3 th:text="${pr.id}"></h3>
+        <h1>Add comment</h1>
+        <form th:action="'/comment/' + ${pr.id} + '/add'" method="post">
+            <textarea type="text" name="comment" placeholder="Enter comment" class="form-control"></textarea><br>
+            <button type="submit" class="btn btn-success">Add comment</button>
+        </form>
+    </div>
+    <div th:each="cm : ${comments}">
+        <h3 th:text = "${cm.comment}"></h3>
+    </div>
+
+</div>
+
+</body>
+</html>
